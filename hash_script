@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 0754"
+    exit 1
+fi
+echo -n $1 | sha256sum | awk '{print $1}'
